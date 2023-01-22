@@ -1,0 +1,42 @@
+.note {
+  background-color: lighten($color: #222, $amount: 5);
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+    line-height: 120%;
+    font-size: 16px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .date {
+      font-size: 15px;
+    }
+  }
+}
+
+.trash-btn {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: tomato;
+    cursor: pointer;
+  }
+}
