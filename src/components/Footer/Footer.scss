@@ -1,0 +1,15 @@
+footer {
+  padding: 10px 0;
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    .powered {
+      a {
+        margin-left: 5px;
+      }
+    }
+  }
+}
