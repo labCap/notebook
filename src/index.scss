@@ -36,7 +36,9 @@ a {
   text-decoration: underline;
 }
 
-button {
+button,
+.btn {
+  text-decoration: none;
   display: inline-block;
   min-width: 60px;
   background-color: transparent;

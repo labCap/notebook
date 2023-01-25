@@ -29,6 +29,19 @@ function App() {
     },
   ]);
 
+  const addNote = (title, description) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      title: title,
+      date: date.toLocaleDateString(),
+      description: description,
+    };
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
+    console.log(notes);
+  };
+
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
@@ -42,7 +55,7 @@ function App() {
             path="/"
             element={<HomePage notes={notes} handleDeleteNote={deleteNote} />}
           />
-          <Route path="/note" element={<NotePage />} />
+          <Route path="/note" element={<NotePage handleAddNote={addNote} />} />
         </Routes>
       </div>
     </Router>
